@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+endpoints:
+  shutdown:
+    enabled: true
+
+spring:
+  application:
+    databaseName: products
+    eventsCollectionName: events
+    snapshotCollectionName: snapshots
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/jobseek
+    username: root
+    password: password
+    validation-query: SELECT 1
+    initial-size: 2
+    sql-script-encoding: UTF-8
+
+#elasticsearch:
+ # host: localhost
+ # port: 9300
+#elasticsearch.host = search-mynewdomain-lft22n4i5ycd35xvengzhg7vtu.us-east-1.es.amazonaws.com
+ # if you use you local elasticsearch host
+
+
